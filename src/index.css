@@ -2,41 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* SWIS Water Intelligence Design System - Water-themed color palette */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Water-themed background system */
+    --background: 210 30% 98%;
+    --foreground: 210 60% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Card system with water transparency */
+    --card: 200 50% 98%;
+    --card-foreground: 210 60% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 200 50% 98%;
+    --popover-foreground: 210 60% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary: Deep ocean blue */
+    --primary: 210 85% 45%;
+    --primary-foreground: 210 30% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary: Fresh water blue */
+    --secondary: 195 60% 92%;
+    --secondary-foreground: 210 70% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted: Soft water mist */
+    --muted: 200 40% 94%;
+    --muted-foreground: 210 25% 55%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent: Aqua highlights */
+    --accent: 180 70% 85%;
+    --accent-foreground: 210 70% 25%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Water alert system */
+    --destructive: 355 85% 60%;
+    --destructive-foreground: 210 30% 98%;
+    --warning: 45 95% 65%;
+    --warning-foreground: 45 30% 25%;
+    --success: 140 70% 50%;
+    --success-foreground: 210 30% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Water-themed gradients */
+    --gradient-ocean: linear-gradient(135deg, hsl(210, 85%, 45%), hsl(195, 85%, 55%));
+    --gradient-flow: linear-gradient(90deg, hsl(180, 70%, 85%), hsl(200, 60%, 88%), hsl(220, 50%, 90%));
+    --gradient-aqua: linear-gradient(45deg, hsl(180, 85%, 60%), hsl(195, 85%, 70%));
+    --gradient-mist: linear-gradient(180deg, hsl(200, 40%, 96%), hsl(210, 30%, 98%));
 
-    --radius: 0.5rem;
+    /* Water droplet shadows */
+    --shadow-water: 0 4px 20px hsl(210, 85%, 45% / 0.15);
+    --shadow-flow: 0 8px 32px hsl(180, 70%, 60% / 0.2);
+    --shadow-mist: 0 2px 8px hsl(200, 40%, 70% / 0.1);
+
+    /* Smooth water transitions */
+    --transition-flow: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-ripple: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --border: 200 50% 88%;
+    --input: 200 50% 92%;
+    --ring: 210 85% 45%;
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,33 +80,38 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark water theme */
+    --background: 210 50% 8%;
+    --foreground: 195 50% 92%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 210 45% 12%;
+    --card-foreground: 195 50% 92%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 210 45% 12%;
+    --popover-foreground: 195 50% 92%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 195 85% 65%;
+    --primary-foreground: 210 50% 8%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 210 35% 20%;
+    --secondary-foreground: 195 50% 92%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 210 35% 18%;
+    --muted-foreground: 210 25% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 180 60% 70%;
+    --accent-foreground: 210 50% 8%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 355 85% 60%;
+    --destructive-foreground: 210 30% 98%;
+    --warning: 45 95% 65%;
+    --warning-foreground: 45 30% 25%;
+    --success: 140 70% 50%;
+    --success-foreground: 210 30% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 210 35% 22%;
+    --input: 210 35% 18%;
+    --ring: 195 85% 65%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +129,90 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    background: var(--gradient-mist);
+  }
+}
+
+/* Water-themed utility classes */
+@layer utilities {
+  .gradient-ocean {
+    background: var(--gradient-ocean);
+  }
+  
+  .gradient-flow {
+    background: var(--gradient-flow);
+  }
+  
+  .gradient-aqua {
+    background: var(--gradient-aqua);
+  }
+  
+  .shadow-water {
+    box-shadow: var(--shadow-water);
+  }
+  
+  .shadow-flow {
+    box-shadow: var(--shadow-flow);
+  }
+  
+  .shadow-mist {
+    box-shadow: var(--shadow-mist);
+  }
+  
+  .transition-flow {
+    transition: var(--transition-flow);
+  }
+  
+  .transition-ripple {
+    transition: var(--transition-ripple);
+  }
+}
+
+/* Water-flow animations */
+@layer components {
+  .water-flow {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .water-flow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: water-shine 2.5s infinite ease-in-out;
+  }
+  
+  @keyframes water-shine {
+    0% { left: -100%; }
+    50% { left: 100%; }
+    100% { left: 100%; }
+  }
+  
+  .ripple-effect {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .ripple-effect::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(180, 220, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+  
+  .ripple-effect:hover::after {
+    width: 300px;
+    height: 300px;
   }
 }

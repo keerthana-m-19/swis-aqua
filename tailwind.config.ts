@@ -31,6 +31,14 @@ export default {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
+        },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+        },
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
@@ -57,6 +65,21 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      backgroundImage: {
+        'gradient-ocean': 'var(--gradient-ocean)',
+        'gradient-flow': 'var(--gradient-flow)',
+        'gradient-aqua': 'var(--gradient-aqua)',
+        'gradient-mist': 'var(--gradient-mist)',
+      },
+      boxShadow: {
+        'water': 'var(--shadow-water)',
+        'flow': 'var(--shadow-flow)',
+        'mist': 'var(--shadow-mist)',
+      },
+      transitionTimingFunction: {
+        'flow': 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+        'ripple': 'cubic-bezier(0.4, 0, 0.2, 1)',
       },
       borderRadius: {
         lg: "var(--radius)",
